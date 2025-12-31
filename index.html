@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy New Year Moon 🌙</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins', sans-serif;
+  background: linear-gradient(135deg,#ff758c,#ff7eb3,#8e44ad);
+  color:white;
+  text-align:center;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+/* Floating Hearts */
+.heart{
+  position:fixed;
+  bottom:-20px;
+  color:#ffeb3b;
+  font-size:20px;
+  animation: float 8s linear infinite;
+}
+
+@keyframes float{
+  0%{transform:translateY(0);opacity:1;}
+  100%{transform:translateY(-110vh);opacity:0;}
+}
+
+/* Header */
+h1{
+  font-family:'Great Vibes', cursive;
+  font-size:70px;
+  margin-top:40px;
+  text-shadow:0 0 25px rgba(255,255,255,0.8);
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+  from{text-shadow:0 0 10px #fff;}
+  to{text-shadow:0 0 35px #ffeb3b;}
+}
+
+.subtitle{
+  font-size:20px;
+  margin-bottom:30px;
+}
+
+/* Cards */
+.card{
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.18);
+  border-radius:25px;
+  padding:30px;
+  margin:30px auto;
+  width:85%;
+  max-width:600px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.3);
+  animation: fadeUp 1.5s ease;
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(50px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+.lyrics{
+  font-style:italic;
+  line-height:1.8;
+  font-size:17px;
+}
+
+button{
+  margin-top:15px;
+  padding:12px 30px;
+  border:none;
+  border-radius:30px;
+  font-size:16px;
+  cursor:pointer;
+  background:linear-gradient(45deg,#ffeb3b,#ff4081);
+  color:#000;
+  font-weight:600;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.1);
+}
+
+.hidden{
+  display:none;
+  margin-top:15px;
+  font-size:18px;
+}
+
+.final{
+  font-family:'Great Vibes', cursive;
+  font-size:40px;
+  margin:40px 0;
+  color:#ffeb3b;
+}
+
+footer{
+  margin:30px;
+  opacity:0.85;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Happy New Year, Moon 🌙</h1>
+<p class="subtitle">You are my  most favorite miracle  💖</p>
+
+<div class="card">
+<h2>💌 A Love Note</h2>
+<p>
+Dear Moon,<br><br>
+Every moment with you feels magical.  
+You are the smile in my chaos,  
+the peace in my heart,  
+and the reason I believe in love ❤️
+</p>
+</div>
+
+<div class="card">
+<h2>🎶 Lyrics That Remind Me of You</h2>
+<p class="lyrics">
+“I found a love, for me<br>
+Darling, just dive right in and follow my lead<br>
+Well, I found a girl, beautiful and sweet…” 💕
+</p>
+</div>
+
+<div class="card">
+<h2>💖 A Small Question</h2>
+<p>Who made my life brighter this year?</p>
+<button onclick="showAnswer()">Tap to Reveal 🌸</button>
+<p id="answer" class="hidden">It was you, my Moon 🌙</p>
+</div>
+
+<div class="card">
+<h2>🎁 One Last Surprise</h2>
+<button onclick="surprise()">Open My Heart 💝</button>
+<p id="surpriseText" class="hidden">
+This New Year, I promise more love, more care,
+more memories — and always *you & me* ❤️
+</p>
+</div>
+
+<p class="final">Forever Yours, 🌙</p>
+
+<footer>
+Made with infinite love ❤️ | Happy New Year ✨
+</footer>
+
+<script>
+// Hearts generator
+setInterval(()=>{
+  const heart=document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML="❤️";
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.fontSize=(10+Math.random()*20)+"px";
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),8000);
+},400);
+
+function showAnswer(){
+  document.getElementById("answer").style.display="block";
+}
+
+function surprise(){
+  document.getElementById("surpriseText").style.display="block";
+}
+</script>
+
+</body>
+</html>
