@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
+<!-- IMPORTANT FOR MOBILE -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Happy New Year Moon 🌙</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -27,90 +31,106 @@ body{
   position:fixed;
   bottom:-20px;
   color:#ffeb3b;
-  font-size:20px;
-  animation: float 8s linear infinite;
+  font-size:18px;
+  animation: float 7s linear infinite;
 }
 
 @keyframes float{
   0%{transform:translateY(0);opacity:1;}
-  100%{transform:translateY(-110vh);opacity:0;}
+  100%{transform:translateY(-120vh);opacity:0;}
 }
 
 /* Header */
 h1{
   font-family:'Great Vibes', cursive;
-  font-size:70px;
-  margin-top:40px;
-  text-shadow:0 0 25px rgba(255,255,255,0.8);
+  font-size:3rem;
+  margin-top:30px;
+  padding:0 15px;
+  line-height:1.2;
   animation: glow 2s infinite alternate;
 }
 
 @keyframes glow{
   from{text-shadow:0 0 10px #fff;}
-  to{text-shadow:0 0 35px #ffeb3b;}
+  to{text-shadow:0 0 25px #ffeb3b;}
 }
 
 .subtitle{
-  font-size:20px;
-  margin-bottom:30px;
+  font-size:1rem;
+  margin:15px 20px 25px;
 }
 
 /* Cards */
 .card{
   backdrop-filter: blur(12px);
   background: rgba(255,255,255,0.18);
-  border-radius:25px;
-  padding:30px;
-  margin:30px auto;
-  width:85%;
-  max-width:600px;
-  box-shadow:0 15px 40px rgba(0,0,0,0.3);
-  animation: fadeUp 1.5s ease;
+  border-radius:22px;
+  padding:22px;
+  margin:20px auto;
+  width:92%;
+  max-width:480px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.3);
+  animation: fadeUp 1.2s ease;
 }
 
 @keyframes fadeUp{
-  from{opacity:0;transform:translateY(50px);}
+  from{opacity:0;transform:translateY(40px);}
   to{opacity:1;transform:translateY(0);}
 }
 
-.lyrics{
-  font-style:italic;
-  line-height:1.8;
-  font-size:17px;
+.card h2{
+  font-size:1.2rem;
+  margin-bottom:10px;
 }
 
+.card p{
+  font-size:0.95rem;
+  line-height:1.7;
+}
+
+/* Lyrics */
+.lyrics{
+  font-style:italic;
+  font-size:0.9rem;
+}
+
+/* Buttons */
 button{
+  width:100%;
   margin-top:15px;
-  padding:12px 30px;
+  padding:14px;
   border:none;
   border-radius:30px;
-  font-size:16px;
+  font-size:1rem;
   cursor:pointer;
   background:linear-gradient(45deg,#ffeb3b,#ff4081);
   color:#000;
   font-weight:600;
-  transition:0.3s;
 }
 
-button:hover{
-  transform:scale(1.1);
+button:active{
+  transform:scale(0.97);
 }
 
+/* Hidden Text */
 .hidden{
   display:none;
   margin-top:15px;
-  font-size:18px;
+  font-size:0.95rem;
 }
 
+/* Final Message */
 .final{
   font-family:'Great Vibes', cursive;
-  font-size:40px;
-  margin:40px 0;
+  font-size:2rem;
+  margin:30px 0 20px;
   color:#ffeb3b;
 }
 
+/* Footer */
 footer{
-  margin:30px;
+  font-size:0.8rem;
+  margin-bottom:20px;
   opacity:0.85;
 }
 </style>
@@ -119,61 +139,59 @@ footer{
 <body>
 
 <h1>Happy New Year, Moon 🌙</h1>
-<p class="subtitle">You are my  most favorite miracle  💖</p>
+<p class="subtitle">You make my world brighter every single day 💖</p>
 
 <div class="card">
-<h2>💌 A Love Note</h2>
+<h2>💌 A Message for You</h2>
 <p>
 Dear Moon,<br><br>
-Every moment with you feels magical.  
-You are the smile in my chaos,  
-the peace in my heart,  
-and the reason I believe in love ❤️
+You are my peace, my smile, my safe place.  
+This New Year, I just want you to know —  
+my heart chooses you, every day ❤️
 </p>
 </div>
 
 <div class="card">
-<h2>🎶 Lyrics That Remind Me of You</h2>
+<h2>🎶 Lyrics That Feel Like Us</h2>
 <p class="lyrics">
-“I found a love, for me<br>
-Darling, just dive right in and follow my lead<br>
-Well, I found a girl, beautiful and sweet…” 💕
+“Take my hand, take my whole life too  
+For I can’t help falling in love with you…” 💕
 </p>
 </div>
 
 <div class="card">
-<h2>💖 A Small Question</h2>
-<p>Who made my life brighter this year?</p>
-<button onclick="showAnswer()">Tap to Reveal 🌸</button>
-<p id="answer" class="hidden">It was you, my Moon 🌙</p>
+<h2>💖 A Cute Question</h2>
+<p>Who made this year unforgettable?</p>
+<button onclick="showAnswer()">Tap Here 💗</button>
+<p id="answer" class="hidden">It was YOU, my Moon 🌙</p>
 </div>
 
 <div class="card">
 <h2>🎁 One Last Surprise</h2>
-<button onclick="surprise()">Open My Heart 💝</button>
+<button onclick="surprise()">Open It 🎆</button>
 <p id="surpriseText" class="hidden">
-This New Year, I promise more love, more care,
-more memories — and always *you & me* ❤️
+This year and every year after —  
+I want *you* beside me ❤️
 </p>
 </div>
 
-<p class="final">Forever Yours, 🌙</p>
+<p class="final">Forever Yours 🌙</p>
 
 <footer>
-Made with infinite love ❤️ | Happy New Year ✨
+Made with ❤️ only for Moon | Happy New Year ✨
 </footer>
 
 <script>
-// Hearts generator
+// Floating hearts (mobile-friendly)
 setInterval(()=>{
   const heart=document.createElement("div");
-  heart.classList.add("heart");
+  heart.className="heart";
   heart.innerHTML="❤️";
   heart.style.left=Math.random()*100+"vw";
-  heart.style.fontSize=(10+Math.random()*20)+"px";
+  heart.style.fontSize=(12+Math.random()*12)+"px";
   document.body.appendChild(heart);
-  setTimeout(()=>heart.remove(),8000);
-},400);
+  setTimeout(()=>heart.remove(),7000);
+},500);
 
 function showAnswer(){
   document.getElementById("answer").style.display="block";
